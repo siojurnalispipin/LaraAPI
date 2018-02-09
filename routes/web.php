@@ -33,3 +33,7 @@ Route::get('/task', function () {
     $task = Task::all();
     return $task;
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
